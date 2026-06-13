@@ -1,0 +1,366 @@
+/* Poore page ka background aur safe font structure */
+body {
+  margin: 0;
+  padding: 0;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #73b3f3; /* Ultra-clean light gray */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #1e293b;
+}
+
+/* Form Container */
+form-container {
+  width: 100%;
+  max-width: 440px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Premium White Card Style */
+form {
+  margin: 30px auto;
+  background: #93f8bd;
+  padding: 32px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Heading Input Box */
+form input[type="text"] {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-weight: 600;
+  background: #8ae2f0;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  color: #0f172a;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Textarea Box */
+form textarea {
+  width: 100%;
+  height: 130px;
+  padding: 12px 14px;
+  font-size: 14px;
+  line-height: 1.5;
+  background: #e9dcf8;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  color: #334155;
+  outline: none;
+  resize: none;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Input Focus Effect */
+form input[type="text"]:focus,
+form textarea:focus {
+  border-color: #2563eb; /* Corporate Blue */
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+/* Placeholder Color */
+form input::placeholder,
+form textarea::placeholder {
+  color: #94a3b8;
+}
+
+/* Button aur Image ka wrapper div (Dono ko ek line me laane ke liye) */
+form > div {
+  display: flex;
+  align-items: center; /* Vertically center align */
+  gap: 12px; /* Button aur Image ke beech ka gap */
+  width: 100%;
+}
+
+/* Overall Section Styling */
+#result {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+#result h2 {
+  color: #333;
+  font-size: 22px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+  border-left: 4px solid #4f46e5;
+  padding-left: 10px;
+}
+
+/* 1. Form Button Layout & Styling */
+form div {
+  margin-bottom: 25px;
+}
+
+form button {
+  width: 100%;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Button Hover & Active States */
+form button:hover {
+  background: linear-gradient(135deg, #4338ca 0%, #6d28d9 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+}
+
+form button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(79, 70, 229, 0.3);
+}
+
+/* 2. Recent Notes Cards Layout */
+
+/* Bookmark Image (Button ke right side me perfect set) */
+form > div img {
+  width: 41px; /* Button ki height ke barabar match kiya */
+  height: 41px;
+  object-fit: contain;
+  padding: 8px;
+  background-color: #f1f5f9; /* Soft gray base */
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Image Hover Effect */
+form > div img:hover {
+  background-color: #e2e8f0;
+  transform: scale(1.03);
+}
+
+.mresult {
+  background: white;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  height: 180px;
+  width: 150px;
+  max-width: 440px;
+  text-align: left;
+  box-sizing: border-box;
+
+  /* Absolute elements ko align karne ke liye position relative lagaya */
+  position: relative;
+}
+
+.mresult h3 {
+  /* White (#f8fafc) se badalkar thoda dark kiya taaki card pe dikhe */
+  color: #1e293b;
+  margin: 0 0 5px 0;
+  padding-right: 35px; /* Taaki heading delete button ke niche na dbe */
+  font-size: 16px;
+}
+
+.mresult {
+  /* Aapki bheji hui image ko background me lagaya */
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGxgxR2A4y9Ock_Xycv9Ah2C0aefIGRLcIMA&s");
+  background-size: cover; /* Image poore card par acche se fit ho jaye */
+  background-position: center; /* Image center me align rahe */
+  background-repeat: no-repeat; /* Image baar-baar repeat na ho */
+
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  height: 180px;
+  width: 150px;
+  max-width: 440px;
+  text-align: left;
+  box-sizing: border-box;
+  position: relative; /* Delete button ko corner me rakhne ke liye */
+}
+
+#result {
+  padding: 20px;
+  margin-top: 0;
+  font-size: 20px;
+  color: #1e293b;
+  display: flex;
+  width: 100vh;
+  justify-content: fit-content;
+  gap: 12px;
+}
+h2 {
+  display: inline-block;
+  margin: 0;
+  font-size: 18px;
+  color: #1e293b;
+  text-align: center;
+}
+/* --- Form & Button Styling --- */
+.notes-form {
+  margin-bottom: 40px;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* --- Recent Notes Section --- */
+#result {
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+}
+#result h2 {
+  font-size: 24px;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+#delete-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Delete button ka style (Top Corner Alignment) */
+.mresult h3 {
+  background: cover;
+  color: #1e293b;
+  margin: 0 0 5px 0;
+  font-size: 16px;
+  /* Right side mein thodi jagah chhodi hai taaki heading button se na takraye */
+  padding-right: 28px;
+  /* Agar heading bohot lambi ho, toh automatic niche line mein chali jayegi */
+  word-wrap: break-word;
+}
+
+/* Delete button ka ekdum edge-to-edge corner style */
+.delete-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 3px 6px; /* Size thoda aur compact kiya taaki bilkul corner mein fit ho sake */
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 10px;
+  text-transform: uppercase;
+  transition: background 0.2s ease;
+
+  /* Isko card ke bilkul aakhri kone (edge) par chipka diya hai */
+  position: absolute;
+  top: 6px; /* Pehle 12px tha, ab aur upar kar diya */
+  right: 6px; /* Pehle 12px था, ab aur right kar diya */
+  margin-top: 0;
+}
+
+/* Hover karne par button ka rang thoda dark karne ke liye */
+.delete-btn:hover {
+  background-color: #cc0000; /* Dark red color unchanged */
+}
+/* --- Form Ke Dono Buttons Ko Ek Line Me Lane Ke Liye --- */
+form > div {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Add Notes aur Preview button ke beech ka gap */
+  width: 100%;
+}
+
+/* Preview Button Ka Style (Grey-Slate Look - Aapke theme ke hisab se) */
+form button[type="button"] {
+  width: 100%;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #64748b 0%, #475569 100%);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(100, 116, 139, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Preview Button Hover & Active States */
+form button[type="button"]:hover {
+  background: linear-gradient(135deg, #475569 0%, #334155 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(100, 116, 139, 0.4);
+}
+
+form button[type="button"]:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(100, 116, 139, 0.3);
+}
+
+/* --- LIVE PREVIEW CONTAINER SECTION --- */
+
+/* Form aur Result ke beech me Preview section ki heading */
+.preview-heading {
+  font-size: 18px;
+  color: #1e293b;
+  margin: 20px auto 10px auto;
+  text-align: left;
+  max-width: 440px;
+  font-weight: bold;
+  border-left: 4px solid #64748b; /* Grey indicator for preview */
+  padding-left: 10px;
+}
+
+/* Preview Card ka wrapper (Taaki notebook background wala card sahi se center ho) */
+.preview-container {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 440px;
+  margin: 0 auto 30px auto;
+  width: 100%;
+}
+
+/* Preview Card Specific Text Padding (Taaki heading delete button ke bina sahi dikhe) */
+.preview-container .mresult h3 {
+  padding-right: 0; /* Kyunki preview me delete button nahi hai */
+  color: #1e293b;
+}
+button:disabled {
+  background-color: #cccccc !important;
+  color: #666666 !important;
+  cursor: not-allowed; /* Stop/Block icon dikhane ke liye */
+  opacity: 0.6; /* Button ko dhundla karne ke liye */
+}
